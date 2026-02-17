@@ -32,16 +32,39 @@
         .feature-item { padding: 15px; border-left: 4px solid var(--secondary); background: #f9f9f9; }
         
         .download-section { text-align: center; padding: 40px 0; border-top: 1px solid #eee; margin-top: 30px; }
+        
+        /* Ajuste nos botões para caberem lado a lado */
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn-download {
-            background: var(--secondary); color: white; padding: 20px 40px;
-            font-size: 1.5rem; text-decoration: none; border-radius: 50px;
-            font-weight: bold; transition: 0.3s; display: inline-block;
+            background: var(--secondary);
+            color: white;
             box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
         }
-        .btn-download:hover { transform: scale(1.05); background: #219150; }
+
+        .btn-manual {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
+        }
+
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
         
-        .tech-info { font-size: 0.9rem; color: #666; margin-top: 15px; }
-        footer { text-align: center; padding: 40px; color: #888; }
+        .tech-info { font-size: 0.85rem; color: #666; margin-top: 20px; line-height: 1.6; }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -56,42 +79,53 @@
 <div class="container">
     <div class="card">
         <h2>Sobre o Protótipo</h2>
-        <p>O BioScan IA é uma ferramenta em desenvolvimento por Gregorio Leal da Silva, academico de Biomedicina pela Universidade da Amazonia (UNAMA). O projeto nasceu com o objetivo de criar um programa simples que podesse realizar um predição de tropismo viral utilizando o modelo de linguagem proteica <strong>ESM-2 (Meta AI)</strong> para analisar a afinidade de sequências virais por receptores humanos.</p>
+        <p>O BioScan IA é uma ferramenta de bioinformática desenvolvida por <strong>Gregorio Leal da Silva</strong>, acadêmico de Biomedicina pela Universidade da Amazônia (UNAMA). O projeto utiliza o modelo de linguagem proteica <strong>ESM-2 (Meta AI)</strong>, baseado em arquitetura Transformer, para analisar a afinidade de sequências virais por receptores humanos.</p>
         
         <div class="features">
             <div class="feature-item">
-                <strong>Análise em Tempo Real</strong><br>Predição de afinidade molecular em segundos.
+                <strong>Análise por IA</strong><br>Processamento via Redes Neurais de última geração.
             </div>
             <div class="feature-item">
-                <strong>05 Receptores Humanos</strong><br>Biblioteca atualizada com alvos críticos.
+                <strong>Banco Customizável</strong><br>Adicione seus próprios receptores de interesse.
             </div>
             <div class="feature-item">
-                <strong>Relatórios em PDF</strong><br>Geração automática de laudos técnicos.
+                <strong>Relatórios Técnicos</strong><br>Geração automática de laudos em formato PDF.
             </div>
             <div class="feature-item">
-                <strong>Manual</strong><br>Tecnologia de redes neurais Transformer.
+                <strong>Uso Acadêmico</strong><br>Desenvolvido para auxiliar pesquisas em virologia.
             </div>
         </div>
 
         <div class="download-section">
-            <p>Pronto para testar em seu computador?</p>
-            <a href="#" class="btn-download">
-                <i class="fas fa-download"></i> BAIXAR BIOSCAN IA
-            </a>
+            <h3>Downloads e Documentação</h3>
+            <p>Baixe o software completo e o guia de instruções oficial.</p>
+            
+            <div class="btn-group">
+                <a href="BioScan_AI_Final.exe" class="btn btn-download">
+                    <i class="fas fa-file-download"></i> BAIXAR SOFTWARE
+                </a>
+
+                <a href="INSTRUCOES_BIOSCAN_AI.pdf" class="btn btn-manual" target="_blank">
+                    <i class="fas fa-book"></i> MANUAL DE USO
+                </a>
+            </div>
+
             <div class="tech-info">
-                Versão 1.0.0 | Compatível com Windows 10/11 | Requer Python 3.9+
+                <strong>Informações Técnicas:</strong><br>
+                Versão 1.0.0 | Windows 10/11 | Tamanho: ~2GB (Inclui pesos do modelo)<br>
+                <em>Certifique-se de ler o manual para correta interpretação dos scores de afinidade.</em>
             </div>
         </div>
     </div>
 </div>
 
 <footer>
-   LICENÇA MIT<br>
-    Desenvolvido por Gregorio Leal da Silva.
+    © 2026 Gregorio Leal da Silva <br>
+    Licença MIT - Código Aberto para fins Acadêmicos
 </footer>
 
 </body>
-
 </html>
+
 
 
